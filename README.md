@@ -8,6 +8,9 @@ Documentation for the API can be found here: http://www.wordreference.com/docs/a
 
 ## TODO
 
+- Rewrite Query#term_translations to handle Entries as well as
+  PrincipalTranslations
+- Rewrite Query#clean_terms so that it doesn't rely on #pop
 - Handle exceptions
 - Handle errors from WordReference.com API
 - Add interface for thesaurus API

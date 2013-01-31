@@ -3,7 +3,7 @@ require 'net/http'
 require_relative 'query'
 
 module WordReference
-  
+
   class Dictionary
     include WordReference
     include WordReference::Configurable
@@ -42,7 +42,7 @@ module WordReference
     end
 
     def url(term)
-      "#{BASE_URL}/0.8/#{api_key}/json/#{name}/#{term}"
+      "#{BASE_URL}/#{api_key}/json/#{name}/#{term}"
     end
 
   end

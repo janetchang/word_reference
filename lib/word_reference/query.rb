@@ -2,7 +2,7 @@ require 'json'
 require_relative 'translation'
 
 module WordReference
-  
+
   class Query
 
     attr_reader :translations
@@ -18,7 +18,6 @@ module WordReference
       terms = terms_without_labels(data) # Removes term labels
       terms = clean_terms(terms) # Remove Original, LINES, and END hashes
       terms = term_translations(terms) # Strips everything but the actual translations
-      
       # Create each translation object and add to translations array
       terms.each { |query_data| new_query.add_translation(Translation.from_query(query_data.values)) }
       new_query
